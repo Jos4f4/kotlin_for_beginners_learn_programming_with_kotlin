@@ -1,5 +1,4 @@
 package conditionals
-
 /*
 // IF AND ELSE
 fun main() {
@@ -92,7 +91,6 @@ fun main() {
 
     println(x)
 }
-*/
 
 // MORE ADVANCED 'WHEN' CONSTRUCTS
 fun main() {
@@ -109,3 +107,4 @@ fun main() {
         !in 1..9 -> println("x is not between 1 and 9")
     }
 }
+*/
