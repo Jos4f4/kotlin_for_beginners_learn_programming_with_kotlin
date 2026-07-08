@@ -1,8 +1,14 @@
 package oo
 
-class Person {
-    var name: String = "Sarah"
-    var age: Int = 42
+class Person(name: String, age: Int) {
+    val name: String
+    var age: Int
+
+    init {
+        this.name = name
+        this.age = age
+        println("Object was created")
+    }
 
     fun speak() {
         println("Hello!")
@@ -12,15 +18,11 @@ class Person {
         println("Hello $name")
     }
 
-//    fun getYearOfBirth(): Int {
-//        return 2016 - age
-//    }
-
     fun getYearOfBirth(): Int = 2016 - age
 }
 
 fun main(args: Array<String>) {
-    val person = Person()
+    val person = Person("Jack", 17)
 
     person.speak()
     person.greet("world")
