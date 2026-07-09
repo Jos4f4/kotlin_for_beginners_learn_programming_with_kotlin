@@ -1,5 +1,5 @@
 package oo
-/*
+
 abstract class Person(open val name: String, open var age: Int) {
 
     abstract fun speak()
@@ -37,4 +37,3 @@ fun main(args: Array<String>) {
     employee.receivePayment()
     employee.speak()
 }
-*/
