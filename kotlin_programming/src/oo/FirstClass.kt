@@ -1,29 +1,32 @@
 package oo
 
-class Person(val name: String, var age: Int) {
+open class Person(open val name: String, open var age: Int) {
 
-    init {
-        println("Object was created")
-    }
+    init { println("Object was created") }
 
-    fun speak() {
-        println("Hello!")
-    }
+    fun speak() { println("Hello!") }
 
-    fun greet(name: String) {
-        println("Hello $name")
-    }
+    fun greet(name: String) { println("Hello $name") }
 
     fun getYearOfBirth(): Int = 2016 - age
 }
 
+class Student(override val name: String, override var age: Int, val studentID: Long): Person(name, age) {
+
+    fun isIntelligent() = true
+}
+
+class Employee(override val name: String, override var age: Int): Person(name, age) {
+
+    fun receivePayment() { println("Received payment.") }
+}
+
 fun main(args: Array<String>) {
-    val person = Person("Jack", 17)
 
-    person.speak()
-    person.greet("world")
-    println(person.getYearOfBirth())
+    val student = Student("John", 25, 3647284)
+    student.speak()
 
-    println(person.name)
-    println(person.age)
+    val employee = Employee("Mary", 32)
+    employee.getYearOfBirth()
+    employee.receivePayment()
 }
