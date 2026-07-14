@@ -1,0 +1,5 @@
+package oo
+
+object CarFactory {
+
+}
